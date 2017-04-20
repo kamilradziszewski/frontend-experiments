@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Eksperyment: Bootstrap</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <!-- <div class="container-fluid"> -->
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+            <img src="../assets/img/logo-mc-main.png" alt="">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="container">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#">O projekcie</a></li>
+          <li><a href="#">Aplikacje</a></li>
+          <li class="active"><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQ <span class="sr-only">(current)</span></a></li>
+        </ul>
+
+      </div><!-- /.navbar-collapse -->
+      </div>
+    <!-- </div> --><!-- /.container-fluid -->
+  </nav>
+
+
+
+  <section class="main container">
+    <div class="row">
+      <div class="col-lg-2">
+        <h1 class="page-title">Blog</h1>
+      </div>
+      <div class="col-lg-10">
+
+      </div>
+    </div>
+  </section>
+
+
+  <nav class="navbar x_navbar-default navbar-fixed-bottom footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3">
+          <h5 class="footer-section">Repozytorium projektu</h5>
+          <img src="../assets/img/logo-github.png" alt="" class="logo">
+        </div>
+
+        <div class="col-lg-3">
+          <h5 class="footer-section">Realizacja</h5>
+          <img src="../assets/img/logo-mc-white.png" alt="" class="logo">
+          <img src="../assets/img/logo-nask.png" alt="" class="logo">
+        </div>
+
+        <div class="col-lg-3">
+          <h5 class="footer-section">Do pobrania</h5>
+          <a href="#">Założenia projektu B + R</a>
+          <a href="#">O identyfikacji wizualnej</a>
+        </div>
+
+        <div class="col-lg-3">
+          <h5 class="footer-section">Zapisz się na newsletter</h5>
+          <p>Otrzymuj raz w miesiącu aktualne informacje o projekcie aplikacje.gov.pl</p>
+
+          <form>
+            <div class="form-group">
+              <label for="email">Służbowy e-mail</label>
+              <input class="form-control" type="text" id="email" value="" placeholder="Wpisz swój służbowy e-mail">
+            </div>
+            <button class="form-control" type="submit">Zapisz się na newsletter</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

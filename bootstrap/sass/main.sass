@@ -1,0 +1,174 @@
+/************************************************/
+/*** CONSTANTS
+
+$header-bg-color: #fbfbfb
+$footer-bg-color: #323232
+$blue: #0090d1
+$black: #000
+$white: #fff
+$medium-grey: #777
+
+$screen-sm-min: "only screen and (min-width: 768px)"
+
+@font-face
+  font-family: Roboto
+  src: url('../fonts/Roboto-Light.woff')
+  font-weight: normal
+
+@font-face
+  font-family: Roboto
+  src: url('../fonts/Roboto-Medium.woff')
+  font-weight: bold
+
+@font-face
+  font-family: RobotoBold
+  src: url('../fonts/Roboto-Bold.woff')
+
+
+/************************************************/
+/*** GENERAL
+
+body
+  font-family: Roboto
+
+
+/************************************************/
+/*** TOP NAV
+
+.navbar
+  background-color: $header-bg-color
+  font-family: Roboto
+
+.navbar-header
+  height: 70px
+
+.navbar-brand
+  margin-right: 50px
+  padding: 0
+  img
+    height: 70px
+
+.navbar-nav
+  margin-top: 10px
+  @media #{$screen-sm-min}
+    margin-left: -30px
+  li
+    a
+      // height: 70px
+      // padding-top: 25px
+      color: $black
+    &.active
+      font-weight: bold
+
+.navbar-toggle
+  border-color: $medium-grey
+  top: 8px
+  .icon-bar
+    background-color: $medium-grey
+
+
+/************************************************/
+/*** MAIN CONTENT
+
+.main
+  padding-top: 20px
+
+.page-title
+  margin-top: 10px
+  margin-bottom: 30px
+  font-weight: bold
+
+.table-of-contents
+  margin-bottom: 50px
+  li
+    margin-bottom: 10px
+    &.active
+      a
+        color: $blue
+        font-weight: bold
+    a
+      color: $black
+      text-decoration: none
+
+// ACCORDION
+
+.panel-group
+  padding-left: 50px
+  .panel
+    box-shadow: none
+    margin-bottom: 20px
+    .panel-heading
+      .panel-title
+        font-size: 3rem
+        font-weight: normal
+        a
+          text-decoration: none
+          position: relative
+          &::before
+            display: block
+            content: ''
+            width: 18px
+            height: 18px
+            position: absolute
+            left: -50px
+            top: 7px
+            background-image: url('../../assets/img/icon-chevron-right.svg')
+            background-repeat: no-repeat
+            background-size: 100%
+            transition: transform 0.3s
+          &:not(.collapsed)
+            &::before
+              transform: rotate(90deg)
+    .panel-collapse
+      .panel-body
+        border-top: 0px solid
+        p
+          font-size: 1.7rem
+
+
+/************************************************/
+/*** FOOTER
+
+.footer
+  background-color: $footer-bg-color
+  color: $white
+  margin-top: 30px
+  margin-bottom: 0
+  padding-top: 30px
+  padding-bottom: 30px
+  .footer-section
+    margin-bottom: 70px
+    h5
+      font-size: 1.6rem
+      &::after
+        content: ''
+        display: block
+        width: 80px
+        border-top: 3px solid $white
+        padding-top: 10px
+        margin-top: 20px
+  .logo
+    margin-top: 10px
+    margin-bottom: 20px
+    margin-right: 20px
+  a
+    display: block
+    color: $white
+    margin-bottom: 15px
+  form
+    label
+      margin-top: 20px
+      font-weight: normal
+      font-size: 1.2rem
+      margin-bottom: 10px
+    input
+      border-radius: 0
+      background-color: $footer-bg-color
+      padding-top: 20px
+      padding-bottom: 20px
+    button
+      color: $blue
+      font-size: 1.6rem
+      padding-top: 12px
+      padding-bottom: 12px
+      height: auto
