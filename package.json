@@ -16,9 +16,9 @@
     "gulp-sourcemaps": "^2.6.0"
   },
   "dependencies": {
-    "jquery": "^3.2.1",
+    "@salesforce-ux/design-system": "^2.2.2",
     "bootstrap": "^3.3.7",
     "foundation-sites": "^6.3.1",
-    "@salesforce-ux/design-system": "^2.2.2"
+    "jquery": "^3.2.1"
   }
 }
