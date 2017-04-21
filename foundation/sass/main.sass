@@ -1,0 +1,243 @@
+/************************************************/
+/*** CONSTANTS
+
+$header-bg-color: #fbfbfb
+$footer-bg-color: #323232
+$blue: #0090d1
+$black: #000
+$white: #fff
+$light-grey: #f7f7f7
+$medium-grey: #777
+
+$screen-sm-min: "only screen and (min-width: 768px)"
+
+@font-face
+  font-family: Roboto
+  src: url('../fonts/Roboto-Light.woff')
+  font-weight: normal
+
+@font-face
+  font-family: Roboto
+  src: url('../fonts/Roboto-Medium.woff')
+  font-weight: bold
+
+@font-face
+  font-family: RobotoBold
+  src: url('../fonts/Roboto-Bold.woff')
+
+
+/************************************************/
+/*** MIXINS
+
+=line-below($line-color: $black)
+  &::after
+    content: ''
+    display: block
+    width: 80px
+    border-top: 3px solid $line-color
+    padding-top: 10px
+    margin-top: 20px
+
+
+/************************************************/
+/*** GENERAL
+
+body
+  font-family: Roboto
+
+
+/************************************************/
+/*** TOP NAV
+
+.title-bar
+  text-align: right
+  background-color: $medium-grey
+
+.top-bar
+  background-color: $header-bg-color
+  .menu
+    background-color: $header-bg-color
+    .menu-text
+      padding: 0
+      a
+        padding: 0
+        margin-right: 50px
+      img
+        height: 70px
+    li
+      a
+        color: $black
+        background-color: transparent
+      &.active
+        font-weight: bold
+
+
+/************************************************/
+/*** MAIN CONTENT
+
+.main
+  padding-top: 20px
+
+.page-title
+  margin-top: 10px
+  margin-bottom: 30px
+  font-weight: bold
+  font-family: Roboto
+  font-size: 2.4rem
+
+.table-of-contents
+  margin-bottom: 50px
+  li
+    margin-bottom: 10px
+    &.active
+      a
+        color: $blue
+        font-weight: bold
+    a
+      color: $black
+      text-decoration: none
+
+// ACCORDION
+
+.accordion
+  padding-left: 50px
+  .accordion-item
+    .accordion-title
+      font-size: 1.8rem
+      font-weight: normal
+      color: $black
+      border: none
+      position: relative
+      background-color: transparent
+      &::before
+        content: none
+      &::before
+        display: block
+        content: ''
+        width: 18px
+        height: 18px
+        position: absolute
+        left: -50px
+        background-image: url('../../assets/img/icon-chevron-right.svg')
+        background-repeat: no-repeat
+        background-size: 100%
+        transition: transform 0.3s
+    &.is-active
+      .accordion-title
+        &::before
+          transform: rotate(90deg)
+    .accordion-content
+      border: none
+      p
+        font-weight: lighter
+
+// BLOG ITEMS
+
+.items
+  .card
+    margin-bottom: 30px
+    background-color: $light-grey
+    position: relative
+    border: none
+    .date-overlay
+      position: absolute
+      background-color: $black
+      color: $white
+      top: 7px
+      left: 7px
+      padding: 7px 12px
+      font-size: 0.9rem
+      line-height: 1
+    .card-section
+      height: 100px
+      h3
+        line-height: 30px
+        font-size: 1.3rem
+
+.pagination
+  li
+    padding: 8px
+    &.current
+      background-color: transparent
+      padding: 8px
+      a
+        background-color: $blue
+        color: $white
+    a
+      border: 1px solid
+      border-radius: 3px
+      border-color: $medium-grey
+      color: $medium-grey
+      &.pagination-prev, &.pagination-next
+        border: none
+        background-repeat: no-repeat
+        background-size: 10px
+        color: $black
+        text-transform: uppercase
+      &.pagination-prev
+        background-image: url('../../assets/img/icon-chevron-left.svg')
+        background-position: left center
+        padding-left: 20px
+      &.pagination-next
+        background-image: url('../../assets/img/icon-chevron-right.svg')
+        background-position: right center
+        padding-right: 20px
+
+.aside
+  h4
+    text-transform: uppercase
+    color: $medium-grey
+    font-size: 1.2rem
+    margin-top: 20px
+    +line-below()
+  ul
+    li
+      font-size: 1.1rem
+      border-bottom: 1px solid $light-grey
+      padding: 15px 0
+
+
+/************************************************/
+/*** FOOTER
+
+.footer
+  background-color: $footer-bg-color
+  color: $white
+  margin-top: 30px
+  padding-top: 30px
+  padding-bottom: 30px
+  font-weight: lighter
+  font-size: 0.9rem
+  .footer-section
+    margin-bottom: 70px
+    h5
+      font-size: 1rem
+      +line-below($white)
+  .logo
+    margin-top: 10px
+    margin-bottom: 20px
+    margin-right: 20px
+  a
+    display: block
+    color: $white
+    margin-bottom: 15px
+  form
+    label
+      margin-top: 20px
+      font-weight: lighter
+      font-size: 0.8rem
+      margin-bottom: 10px
+      color: $white
+    input
+      background-color: $footer-bg-color
+      font-size: 0.9rem
+      color: $white
+      &:focus
+        background-color: $footer-bg-color
+    button
+      background-color: $white
+      color: $blue
+      border-radius: 4px
+      font-size: 1rem
+      padding-top: 15px
+      padding-bottom: 15px
