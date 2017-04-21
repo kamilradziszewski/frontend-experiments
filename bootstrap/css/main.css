@@ -18,6 +18,8 @@
 }
 
 /************************************************/
+/*** MIXINS */
+/************************************************/
 /*** GENERAL */
 body {
   font-family: Roboto;
@@ -146,6 +148,83 @@ body {
 
 .panel-group .panel .panel-collapse .panel-body p {
   font-size: 1.7rem;
+  font-weight: lighter;
+}
+
+.items .card {
+  margin-bottom: 30px;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+.items .card .date-overlay {
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  top: 7px;
+  left: 7px;
+  padding: 7px 12px;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.items .card .card-label {
+  height: 100px;
+  padding: 20px;
+}
+
+.items .card .card-label h3 {
+  font-weight: lighter;
+  margin: 0;
+  line-height: 30px;
+  font-size: 2.1rem;
+}
+
+.pagination li a {
+  margin-left: 20px;
+  border-radius: 3px;
+  border-color: #777;
+  color: #777;
+}
+
+.pagination li a.pagination-prev, .pagination li a.pagination-next {
+  border: none;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  color: #000;
+}
+
+.pagination li a.pagination-prev {
+  background-image: url("../../assets/img/icon-chevron-left.svg");
+  background-position: left center;
+  padding-left: 20px;
+}
+
+.pagination li a.pagination-next {
+  background-image: url("../../assets/img/icon-chevron-right.svg");
+  background-position: right center;
+  padding-right: 20px;
+}
+
+.aside h4 {
+  font-weight: lighter;
+  color: #777;
+}
+
+.aside h4::after {
+  content: '';
+  display: block;
+  width: 80px;
+  border-top: 3px solid #000;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+.aside ul li {
+  font-size: 1.6rem;
+  font-weight: lighter;
+  border-bottom: 1px solid #f7f7f7;
+  padding: 15px 0;
 }
 
 /************************************************/
@@ -157,6 +236,7 @@ body {
   margin-bottom: 0;
   padding-top: 30px;
   padding-bottom: 30px;
+  font-weight: lighter;
 }
 
 .footer .footer-section {
@@ -165,6 +245,7 @@ body {
 
 .footer .footer-section h5 {
   font-size: 1.6rem;
+  font-weight: lighter;
 }
 
 .footer .footer-section h5::after {
@@ -190,7 +271,7 @@ body {
 
 .footer form label {
   margin-top: 20px;
-  font-weight: normal;
+  font-weight: lighter;
   font-size: 1.2rem;
   margin-bottom: 10px;
 }

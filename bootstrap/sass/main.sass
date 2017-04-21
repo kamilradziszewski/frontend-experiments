@@ -6,6 +6,7 @@ $footer-bg-color: #323232
 $blue: #0090d1
 $black: #000
 $white: #fff
+$light-grey: #f7f7f7
 $medium-grey: #777
 
 $screen-sm-min: "only screen and (min-width: 768px)"
@@ -23,6 +24,19 @@ $screen-sm-min: "only screen and (min-width: 768px)"
 @font-face
   font-family: RobotoBold
   src: url('../fonts/Roboto-Bold.woff')
+
+
+/************************************************/
+/*** MIXINS
+
+=line-below($line-color: $black)
+  &::after
+    content: ''
+    display: block
+    width: 80px
+    border-top: 3px solid $line-color
+    padding-top: 10px
+    margin-top: 20px
 
 
 /************************************************/
@@ -54,8 +68,6 @@ body
     margin-left: -30px
   li
     a
-      // height: 70px
-      // padding-top: 25px
       color: $black
     &.active
       font-weight: bold
@@ -124,6 +136,65 @@ body
         border-top: 0px solid
         p
           font-size: 1.7rem
+          font-weight: lighter
+
+// BLOG ITEMS
+
+.items
+  .card
+    margin-bottom: 30px
+    background-color: $light-grey
+    position: relative
+    .date-overlay
+      position: absolute
+      background-color: $black
+      color: $white
+      top: 7px
+      left: 7px
+      padding: 7px 12px
+      font-size: 1.2rem
+      line-height: 1
+    .card-label
+      height: 100px
+      padding: 20px
+      h3
+        font-weight: lighter
+        margin: 0
+        line-height: 30px
+        font-size: 2.1rem
+
+.pagination
+  li
+    a
+      margin-left: 20px
+      border-radius: 3px
+      border-color: $medium-grey
+      color: $medium-grey
+      &.pagination-prev, &.pagination-next
+        border: none
+        background-repeat: no-repeat
+        background-size: 10px
+        color: $black
+      &.pagination-prev
+        background-image: url('../../assets/img/icon-chevron-left.svg')
+        background-position: left center
+        padding-left: 20px
+      &.pagination-next
+        background-image: url('../../assets/img/icon-chevron-right.svg')
+        background-position: right center
+        padding-right: 20px
+
+.aside
+  h4
+    font-weight: lighter
+    color: $medium-grey
+    +line-below()
+  ul
+    li
+      font-size: 1.6rem
+      font-weight: lighter
+      border-bottom: 1px solid $light-grey
+      padding: 15px 0
 
 
 /************************************************/
@@ -136,17 +207,13 @@ body
   margin-bottom: 0
   padding-top: 30px
   padding-bottom: 30px
+  font-weight: lighter
   .footer-section
     margin-bottom: 70px
     h5
       font-size: 1.6rem
-      &::after
-        content: ''
-        display: block
-        width: 80px
-        border-top: 3px solid $white
-        padding-top: 10px
-        margin-top: 20px
+      font-weight: lighter
+      +line-below($white)
   .logo
     margin-top: 10px
     margin-bottom: 20px
@@ -158,7 +225,7 @@ body
   form
     label
       margin-top: 20px
-      font-weight: normal
+      font-weight: lighter
       font-size: 1.2rem
       margin-bottom: 10px
     input
