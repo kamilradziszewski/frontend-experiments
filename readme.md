@@ -1,6 +1,6 @@
 # aplikacje.gov.pl – Eksperyment frontendowy (CSS)
 ## Cel eksperymentu
-Eksperyment polega na zakodowaniu dwóch widoków Aplikacji (strony FAQ i Blog) w kilku frameworkach frontendowych CSS.
+Eksperyment polega na zakodowaniu dwóch widoków marketplace [aplikacje.gov.pl](https://aplikacje.gov.pl/) (strony FAQ i Blog) w kilku frameworkach frontendowych CSS.
 
 Aplikacje dostarczane przez zewnętrznych dostawców mają mieć spójny wygląd, dlatego ma powstać nakładka (koncepcje projektowe oraz kod CSS), która ujednolici wygląd aplikacji pisanych z wykorzystaniem różnych frameworków.
 
@@ -9,7 +9,7 @@ Wynikiem eksperymentu ma być ocena:
 * czy do napisania nakładki CSS do każdego z frameworków wymagana jest podobna ilość kodu,
 * który z frameworków jest rekomendowany jako najlepszy do pisania aplikacji.
 
-Przy wyborze frameworków do eksperymentu wzięto pod uwagę 16 popularnych bilbiotek frontendowych:
+Przy wyborze frameworków do eksperymentu wzięto pod uwagę 16 popularnych bibliotek frontendowych:
 
 * [Bootstrap](http://getbootstrap.com/)
 * [Foundation](http://foundation.zurb.com/)
@@ -36,9 +36,7 @@ Z powyższej listy wybrano trzy frameworki:
 2. [Zurb Foundation 6.3.1](http://foundation.zurb.com/)
 3. [Salesforce Lightning Design System 2.2.2](https://www.lightningdesignsystem.com/)
 
-Zdecydowano, że trzecim frameworkiem będzie Lightning Design System: „framework stworzony przez firmę Salesforce na potrzeby aplikacji biznesowych klasy CRM. Mimo niedużej popularności frameworku za wyborem przemawia zastosowanie oraz zbiór komponentów, dobra dokumentacja i niskie ryzyko zakończenia projektu ze strony Salesforce.”
-
-Szczegóły dotyczące procesu wyboru frameworków opisane są w dokumencie [„Analiza rozwiązań w zakresie bibliotek komponentów GUI” (link do wymiany)](https://github.com/miron-grzegorkiewicz/ezd-analizy-it/blob/master/analiza-rozwiazan-biblioteki-komponentow-GUI.rst)
+Zdecydowano, że trzecim frameworkiem będzie Lightning Design System: „Framework stworzony przez firmę Salesforce na potrzeby aplikacji biznesowych klasy CRM. Mimo niedużej popularności frameworku za wyborem przemawia zastosowanie oraz zbiór komponentów, dobra dokumentacja i niskie ryzyko zakończenia projektu ze strony Salesforce.” – szczegóły dotyczące procesu wyboru frameworków opisane są w dokumencie [„Analiza rozwiązań w zakresie bibliotek komponentów GUI” (link do wymiany)](https://github.com/miron-grzegorkiewicz/ezd-analizy-it/blob/master/analiza-rozwiazan-biblioteki-komponentow-GUI.rst)
 
 ## Wynik eksperymentu
 W trakcie eksperymentu zdecydowano o zmianie frameworka Lightning Design System (LDS) na inny. LDS posiada obszerną dokumentację i potężny zestaw klas – znaczącą ilość właściwości CSS przerzucono na klasy HTML. Zatem stylowanie frontendu (wg dokumentacji LDS) odbywa się w większości w plikach HTML.
@@ -92,11 +90,11 @@ BS i FD korzystają z bardzo ogólnych i uniwersalnych nazw klas, nie ma problem
 ## Wnioski
 Każdy z testowanych frameworków umożliwia napisanie nakładki CSS przy wykorzystaniu niedużej (w stosunku do kodu frameworka) ilości kodu.
 
-Ilość kodu potrzebna do napisania nakładek jest niemal identyczna (różni się w obrębie konkrentych elementów, ale objętość całego kodu jest bardzo podobna). SUI nieznacznie odbiega od dwóch pozostałych, kod jest nieco dłuższy i nadpisuje większą ilość właściwości.
+Ilość kodu potrzebna do napisania nakładek jest niemal identyczna (różni się w obrębie konkretnych elementów, ale objętość całego kodu jest bardzo podobna). SUI nieznacznie odbiega od dwóch pozostałych, kod jest nieco dłuższy i nadpisuje większą ilość właściwości.
 
-*(Poniższa opinia jest totalnie subiektywna. Czy chcemy ją tu umieścić?)*
+### Rekomendacja
 
-Najłatwiej i najbardziej intuicyjnie kod pisze się korzystając z frameworka Zurb Foundation, kod jest najbardziej przejrzysty i jasny.
+Na podstawie przeprowadzonego eksperymentu oceniono, iż najłatwiej i najbardziej intuicyjnie kod pisze się korzystając z frameworka Zurb Foundation: kod jest najbardziej przejrzysty i jasny.
 
 Na drugim miejscu jest Semantic UI, ze względu na gorszą dokumentację, oraz większą specyficzność klas.
 
